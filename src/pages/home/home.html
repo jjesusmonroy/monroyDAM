@@ -10,15 +10,15 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Correo electronico</ion-label>
-      <ion-input type="text" [(ngModel)]="user.correo"></ion-input>
+      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Contraseña</ion-label>
       <ion-input type="password" [(ngModel)]="user.password"></ion-input>
     </ion-item>
   </ion-list>
-  <button ion-button round>LOGIN</button>
-  <button ion-button round color="light" ion-button>REGISTRARSE</button>
+  <button ion-button round (click)="normalLogin(user)">LOGIN</button>
+  <button ion-button round color="light" ion-button (click)="register()">REGISTRARSE</button>
   <div>
     <button ion-button primary block round (click)="logWithFacebook()">
       <ion-icon name="logo-facebook">
