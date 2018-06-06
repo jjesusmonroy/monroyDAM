@@ -8,24 +8,27 @@
 
 <ion-content padding>
   <ion-list>
-       <ion-item>
-           <ion-label floating>Correo electronico</ion-label>
-           <ion-input type="text" [(ngModel)]="user.correo"></ion-input>  
-       </ion-item>
-       <ion-item>
-        <ion-label floating>Contraseña</ion-label>
-        <ion-input type="password" [(ngModel)]="user.password"></ion-input>  
+    <ion-item>
+      <ion-label floating>Correo electronico</ion-label>
+      <ion-input type="text" [(ngModel)]="user.correo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
     </ion-item>
   </ion-list>
-    <button ion-button round>LOGIN</button>
-    <button ion-button round color="light"ion-button>REGISTRARSE</button>
+  <button ion-button round>LOGIN</button>
+  <button ion-button round color="light" ion-button>REGISTRARSE</button>
   <div>
-    <button ion-button primary block round (click)="logWithFacebook()"><ion-icon name="logo-facebook">
+    <button ion-button primary block round (click)="logWithFacebook()">
+      <ion-icon name="logo-facebook">
       </ion-icon>Log with facebook</button>
-    <button ion-button primary block round (click)="logWithGoogle()"><ion-icon name="logo-google">
+    <button ion-button primary block round (click)="logWithGoogle()">
+      <ion-icon name="logo-google">
       </ion-icon>Log with google</button>
-    <button ion-button primary block round (click)="logWithTwitter()"><ion-icon name="logo-twitter">
+    <button ion-button primary block round (click)="logWithTwitter()">
+      <ion-icon name="logo-twitter">
       </ion-icon>Log with twitter</button>
-          
+
   </div>
 </ion-content>
