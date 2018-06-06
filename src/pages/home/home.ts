@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { User } from "../../models/user";
 import { AngularFireAuth } from "angularfire2/auth";
+import firebase from 'firebase';
 
 @Component({
   selector: 'page-home',
@@ -22,8 +23,13 @@ export class HomePage {
     }
   }
   logWithFacebook() {
-
+    this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
+      .then( res => {
+        console.log(res);
+        this.navCtrl.push('QrscannerPage');
+      });
   }
+  
   logWithGoogle() {
 
   }
