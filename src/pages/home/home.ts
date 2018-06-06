@@ -6,9 +6,21 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  user = {
+    correo:'',
+    password:''
+  }
   constructor(public navCtrl: NavController) {
 
   }
 
+  logWithFacebook(){
+
+  }
+  logWithGoogle(){
+
+  }
+  logWithTwitter(){
+    
+  }
 }
