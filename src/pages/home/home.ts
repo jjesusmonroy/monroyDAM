@@ -23,6 +23,9 @@ export class HomePage {
     }
   }
   logWithFacebook() {
+    if(this.afAuth.auth){
+      this.afAuth.auth.signOut();
+    }
     this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
       .then( res => {
         console.log('From --Facebook--');
@@ -32,6 +35,9 @@ export class HomePage {
   }
   
   logWithGoogle() {
+    if(this.afAuth.auth){
+      this.afAuth.auth.signOut();
+    }
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
       .then( res => {
         console.log('From --Google--');
@@ -41,7 +47,29 @@ export class HomePage {
       });
   }
   logWithTwitter() {
-
+    if(this.afAuth.auth){
+      this.afAuth.auth.signOut();
+    }
+    this.afAuth.auth.signInWithPopup(new firebase.auth.TwitterAuthProvider())
+      .then( res => {
+        console.log('From --Twitter--');
+        console.log(res);
+        this.navCtrl.push('QrscannerPage');
+      });
+  }
+  logWithGithub(){
+    if(this.afAuth.auth){
+      this.afAuth.auth.signOut();
+    }
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GithubAuthProvider())
+      .then( res => {
+        console.log('From --Github--');
+        console.log(res);
+        this.navCtrl.push('QrscannerPage');
+      });
+  }
+  logOut(){
+    this.afAuth.auth.signOut();
   }
   register(){
     this.navCtrl.push('RegisterPage');
