@@ -25,13 +25,20 @@ export class HomePage {
   logWithFacebook() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
       .then( res => {
+        console.log('From --Facebook--');
         console.log(res);
         this.navCtrl.push('QrscannerPage');
       });
   }
   
   logWithGoogle() {
-
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+      .then( res => {
+        console.log('From --Google--');
+        
+        console.log(res);
+        this.navCtrl.push('QrscannerPage');
+      });
   }
   logWithTwitter() {
 
