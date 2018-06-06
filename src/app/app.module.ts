@@ -8,7 +8,6 @@ import { AngularFireAuthModule } from "angularfire2/auth";
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { QrscannerPage } from "../pages/qrscanner/qrscanner";
 import { FIREBASE_CONFIG } from "./app.firebase.config";
 
 @NgModule({
