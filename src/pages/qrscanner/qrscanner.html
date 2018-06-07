@@ -14,6 +14,10 @@
 
 
 <ion-content padding>
-  <button ion-button primary round (click)="logOut()">log out</button>
-  <button ion-button primary round (click)="qrScanner()">scannear</button>
+  <button ion-button primary round (click)="qrScann()">scannear</button>
+
+  <div *ngIf="flag">
+    <button ion-button primary round (click)="crearContacto()">Save on the contacts</button>
+    <button ion-button primary round (click)="saveOnFirebase()">Save on firebase</button>
+  </div>
 </ion-content>
